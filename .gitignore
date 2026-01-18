@@ -1,0 +1,21 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+out/
+
+# Maven / Gradle
+target/
+build/
+.gradle/
+
+# OS
+.DS_Store
+
+# Logs
+*.log
+
+git rm -r --cached .idea
+git rm --cached *.iml 2>/dev/null || true
+git add .gitignore
+git commit -m "chore: ignore IntelliJ project files"
+git push
