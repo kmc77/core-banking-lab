@@ -7,5 +7,6 @@ SELECT
     data_type
 FROM information_schema.columns
 WHERE table_schema = 'public'
-  AND table_name IN ('account','trans','transactions','client','disp','loan')
+  AND table_name IN ('account','transactions','client','disp','loan')
 ORDER BY table_name, ordinal_position;
+
