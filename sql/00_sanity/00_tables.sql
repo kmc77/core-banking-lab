@@ -15,3 +15,10 @@ SELECT
 FROM pg_stat_user_tables
 WHERE relname IN ('account','trans','transactions','client','disp','loan')
 ORDER BY approx_rows DESC;
+
+
+SELECT table_schema, table_name
+FROM information_schema.tables
+WHERE table_schema = 'public'
+  AND table_name IN ('trans','transactions','account','client','disp','loan')
+ORDER BY table_name;
